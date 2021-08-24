@@ -10,13 +10,16 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.post('/',upload.array('images',5),async function(req, res, next) {
-  console.log("????")
+router.post('/',upload.array('images',15),async function(req, res, next) {
   console.log(req.files)
   var imageUrls = [];
   if(!req.files) {
-    res.status(404).send(json({message:'Bad reuest'}))
-  }else {
+    res.render('badRequest');
+  }
+  if(req.files.length>15) {
+    res.render('badRequest');
+  }
+  else {
     for(let i =0 ;i <req.files.length; i++) {
       await upLoadCloudinary(req.files[i].path)
       .then(result=>{

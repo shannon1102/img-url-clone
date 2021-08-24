@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var imagesRouter = require('./routes/images');
 
 var app = express();
+var $ = require('jquery')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
