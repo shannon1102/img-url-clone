@@ -1,0 +1,127 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-image: url('../images/bg4.jpeg');
+  color:  hsl(82, 61%, 85%);
+}
+
+a {
+  color: hsl(197, 100%, 50%);
+}
+header{
+  display: flex;
+  /* margin: auto; */
+  background-color:rgba(165, 167, 164, 0.5);
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  color: hsl(82, 61%, 85%);
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+footer{
+  display: flex;
+  /* margin: auto; */
+  background-color:rgba(165, 167, 164, 0.5);
+  width: 60%;
+  color: hsl(82, 61%, 85%);
+  font-size: 1.5rem;
+  align-content: center;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+  left: 200px;
+  right: 200px;
+}
+footer h1 {
+  margin: auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-content: space-between;
+  margin: auto;
+  align-items: center;
+ 
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  height: 500px;
+  width: 50%;
+  /* background-color:rgba(165, 167, 164, 0.5); */
+  text-align: center;
+  align-items: center;
+}
+.return-div {
+  display: flex;
+  background-color: rgb(146, 153, 141);
+  position: relative;
+  height: 30px;
+  width: 100%;
+
+}
+.url {
+  background-color: rgb(102, 255, 0);
+  height: 100%;
+  flex: 1;
+}
+#copy-btn {
+  height: 100%;
+
+}
+#submit {
+  width: 16%;
+  min-width: 100px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: rgba(165, 167, 164, 0.5);
+  color:white;
+  font-size: 20px;
+}
+#submit:hover {
+  background-color: rgba(211, 228, 202, 0.5);
+}
+#pick-image {
+  font-size: 40px;
+}
+.return {
+  display: flex;
+  width: 100%;
+  align-content: space-around;
+  margin: 20px 0px;
+}
+
+.return-url {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+
+  /* margin:10px 20px 10px 0px; */
+}
+.return-btn {
+  border-radius: 20px;
+  color: rgb(216, 231, 238);
+  background-color: rgb(20, 105, 105);
+  padding: 10px;
+} 
+.return-btn:hover {
+  background-color: rgb(20, 105, 105);
+}
+.add-more {
+  display: flex;
+  width: 100%;
+ 
+}
+#add-more-btn {
+  width: 16%;
+  height: 40px;
+  margin: auto;
+  border-radius: 20px;
+  background-color: rgb(20, 105, 105);
+}
+
