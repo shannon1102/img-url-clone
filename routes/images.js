@@ -10,7 +10,7 @@ require('dotenv').config()
 router.get('/', function(req, res, next) {
   res.send('Express' );
 });
-router.post('/',upload.array('images',15),async function(req, res, next) {
+router.post('/',upload.array('images',50),async function(req, res, next) {
   console.log(req.files)
   var imageUrls = [];
   if(!req.files) {

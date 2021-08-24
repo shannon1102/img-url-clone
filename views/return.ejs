@@ -13,7 +13,7 @@
             <% for(var i=0; i<imageUrls.length; i++) { %>
                 <li>
                     <div class="return" id="row<%=[i]%>">
-                        <input type="text" class="return-url" value="<%= imageUrls[i] %>" id="url<%=i%>">
+                        <input type="text" class="return-url" value="<%= imageUrls[i] %>" id="url<%=i%>" readonly="readonly">
                         <button onclick="myFunction(this.id)" class="return-btn" id="btn<%=[i]%>">Copy text</button>
                     </div>
                 </li>
@@ -38,10 +38,9 @@
             copyText.setSelectionRange(0, 99999); /* For mobile devices */
 
             /* Copy the text inside the text field */
-            navigator.clipboard.writeText(copyText.value);
-
+            document.execCommand("copy");   
             /* Alert the copied text */
-            alert("Copied the text: " + copyText.value);
+            // alert("Copied the text: " + copyText.value);
         }
     </script>
 
