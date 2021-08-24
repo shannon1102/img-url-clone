@@ -1,13 +1,13 @@
-
 <!-- <img src="..." class="img-fluid" alt="Responsive image"> -->
 
 <!DOCTYPE html>
+
 <head>
     <link href="/stylesheets/style.css" rel="stylesheet" type="text/css">
-    <script src="/javascripts/myScripts.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jQuery/2.1.3/jQuery.min.js"></script>
 </head>
+
 <body>
+
     <div class="list-url">
         <ul>
             <% for(var i=0; i<imageUrls.length; i++) { %>
@@ -15,16 +15,35 @@
                     <div class="return" id="row<%=[i]%>">
                         <input type="text" class="return-url" value="<%= imageUrls[i] %>" id="url<%=i%>">
                         <button onclick="myFunction(this.id)" class="return-btn" id="btn<%=[i]%>">Copy text</button>
-                    </div>     
+                    </div>
                 </li>
-            <% } %>
+                <% } %>
         </ul>
     </div>
-   
+
     <form class="add-more" action="/" method="get">
         <button id="add-more-btn">
             Add more
         </button>
     </form>
-    
+    <script>
+        function myFunction(btnId) {
+            /* Get the text field */
+            const id = btnId.split('')[3];
+            const urlId = 'url' + id;
+            var copyText = document.getElementById(urlId);
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            navigator.clipboard.writeText(copyText.value);
+
+            /* Alert the copied text */
+            alert("Copied the text: " + copyText.value);
+        }
+    </script>
+
+
 </body>
