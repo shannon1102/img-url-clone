@@ -20,10 +20,10 @@ let upLoadCloudinary = (filename) => {
       
       if (result) {
         resolve(result);
-        unlink(filename, (err) => {
-          if (err) throw err;
-          console.log('path/file.txt was deleted');
-        });
+        // unlink(filename, (err) => {
+        //   if (err) throw err;
+        //   console.log('path/file.txt was deleted');
+        // });
       } else {
         reject(error);
       }
